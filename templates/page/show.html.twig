@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {%- if seo and seo.title -%}
+        {{ seo.title }}
+    {%- else -%}
+        {{ page.title }}
+    {%- endif -%}
+{% endblock %}
+
+{% block meta %}
+    {% if seo %}
+        <meta name="description" content="{{ seo.metaDescription }}">
+        <meta name="keywords" content="{{ seo.keywords }}">
+        
+        {# Open Graph метатеги #}
+        <meta property="og:title" content="{{ seo.title }}">
+        <meta property="og:description" content="{{ seo.metaDescription }}">
+        
+        {# Twitter Card метатеги #}
+        <meta name="twitter:title" content="{{ seo.title }}">
+        <meta name="twitter:description" content="{{ seo.metaDescription }}">
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <article class="page">
+        <h1>{{ page.title }}</h1>
+        
+        {% if page.content %}
+            <div class="page-content">
+                {{ page.content|raw }}
+            </div>
+        {% endif %}
+    </article>
+{% endblock %}

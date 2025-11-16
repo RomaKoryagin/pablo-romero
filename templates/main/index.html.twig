@@ -1,0 +1,295 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ asset('1763275198.png') }}" alt="Hieroglyphics Production" class="logo-img">
+                <h1>Hieroglyphics Production</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#technologies" class="nav-link">Технологии</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gold-text">Hieroglyphics</span> Production
+                </h1>
+                <p class="hero-subtitle">Агентство полного цикла для вашего бизнеса в интернете</p>
+                <p class="hero-description">{{ page.content|default('Мы специализируемся на комплексном сопровождении бизнеса в цифровой среде - от создания сайтов до аналитики и рекламы')|raw }}</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Начать проект</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-element" data-speed="0.5">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-element" data-speed="0.8">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="floating-element" data-speed="0.3">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="floating-element" data-speed="0.6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши Услуги</h2>
+                <p class="section-subtitle">Комплексные решения для вашего бизнеса</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Создание и разработка сайтов</h3>
+                    <p>Создаем сайты любой сложности - от лендингов до сложных веб-приложений</p>
+                    <ul class="service-features">
+                        <li>Индивидуальный дизайн</li>
+                        <li>Адаптивная верстка</li>
+                        <li>SEO оптимизация</li>
+                        <li>Высокая скорость загрузки</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Сопровождение сайтов</h3>
+                    <p>Поддержка и развитие вашего сайта после запуска</p>
+                    <ul class="service-features">
+                        <li>Техническая поддержка</li>
+                        <li>Обновление контента</li>
+                        <li>Мониторинг производительности</li>
+                        <li>Резервное копирование</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Интернет-реклама</h3>
+                    <p>Настройка и ведение рекламных кампаний</p>
+                    <ul class="service-features">
+                        <li>Яндекс Директ</li>
+                        <li>ВК Реклама</li>
+                        <li>Реклама Telegram</li>
+                        <li>MyTarget</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Веб-аналитика</h3>
+                    <p>Анализ эффективности вашего сайта и маркетинга</p>
+                    <ul class="service-features">
+                        <li>Microsoft Clarity</li>
+                        <li>Яндекс Метрика</li>
+                        <li>Настройка целей и событий</li>
+                        <li>Отчеты и рекомендации</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>BI-аналитика</h3>
+                    <p>Бизнес-аналитика и цифровизация результатов</p>
+                    <ul class="service-features">
+                        <li>Yandex Datalens</li>
+                        <li>Построение дашбордов</li>
+                        <li>Анализ данных</li>
+                        <li>Бизнес-рекомендации</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Carousel -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Технологии</h2>
+                <p class="section-subtitle">Современные технологии для решения ваших задач</p>
+            </div>
+            <div class="tech-carousel-container">
+                <div class="tech-carousel">
+                    <div class="tech-slide">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                    </div>
+                    <div class="tech-slide">
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="tech-slide">
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-subtitle">Готовы обсудить ваш проект?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (914) 699-07-02</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:hieroglyphics-production@yandex.com">hieroglyphics-production@yandex.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Владивосток, Россия</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="firstname" id="firstname" placeholder="Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastname" id="lastname" placeholder="Фамилия" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="middlename" id="middlename" placeholder="Отчество" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Телефон" required pattern="^\+?[0-9\s\-\(\)]{7,20}$">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="telegramID" id="telegramID" placeholder="Telegram ID (необязательно)">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="description" id="description" placeholder="Описание вашего проекта" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Hieroglyphics Production</h3>
+                    <p>Агентство полного цикла для вашего бизнеса</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Услуги</h4>
+                        <ul>
+                            <li><a href="#services">Разработка сайтов</a></li>
+                            <li><a href="#services">Сопровождение</a></li>
+                            <li><a href="#services">Реклама</a></li>
+                            <li><a href="#services">Аналитика</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Технологии</h4>
+                        <ul>
+                            <li><a href="#technologies">Laravel</a></li>
+                            <li><a href="#technologies">Docker</a></li>
+                            <li><a href="#technologies">PHP</a></li>
+                            <li><a href="#technologies">JavaScript</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hieroglyphics Production. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
