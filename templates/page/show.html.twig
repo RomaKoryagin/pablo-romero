@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
 {% block title %}
     {%- if seo and seo.title -%}
         {{ seo.title }}
@@ -12,11 +16,11 @@
     {% if seo %}
         <meta name="description" content="{{ seo.metaDescription }}">
         <meta name="keywords" content="{{ seo.keywords }}">
-        
+
         {# Open Graph метатеги #}
         <meta property="og:title" content="{{ seo.title }}">
         <meta property="og:description" content="{{ seo.metaDescription }}">
-        
+
         {# Twitter Card метатеги #}
         <meta name="twitter:title" content="{{ seo.title }}">
         <meta name="twitter:description" content="{{ seo.metaDescription }}">
@@ -26,7 +30,7 @@
 {% block body %}
     <article class="page">
         <h1>{{ page.title }}</h1>
-        
+
         {% if page.content %}
             <div class="page-content">
                 {{ page.content|raw }}
