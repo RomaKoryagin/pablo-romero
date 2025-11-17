@@ -5,3 +5,5 @@ framework:
         save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
         cookie_lifetime: 3600
         gc_maxlifetime: 3600
+        cookie_secure: true
+        cookie_samesite: lax
