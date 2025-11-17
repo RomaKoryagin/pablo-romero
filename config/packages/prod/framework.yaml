@@ -1,0 +1,7 @@
+framework:
+    session:
+        # Use filesystem for session storage (works without Redis)
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+        cookie_lifetime: 3600
+        gc_maxlifetime: 3600
